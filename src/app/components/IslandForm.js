@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function IslandForm({ island }) {
+function IslandForm({ island, handleVisitors }) {
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -20,6 +20,7 @@ function IslandForm({ island }) {
 
     setFullName("");
     setPhoneNumber("");
+    handleVisitors(island);
   }
 
   return (
